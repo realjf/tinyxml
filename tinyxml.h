@@ -961,6 +961,9 @@ public:
     }
 
     int HasAttribute(const char *name); ///< Check if this attribute is exist.
+#ifdef TIXML_USE_STL
+    int HasAttribute(const std::string &name); ///< Check if this attribute>
+#endif
 
 #ifdef TIXML_USE_STL
     /** Template form of the attribute query which will try to read the
